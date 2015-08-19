@@ -1,4 +1,4 @@
-Docker build of GeoNetwork
+geonetwork-docker
 ===========
 
 Docker container running [GeoNetwork](http://geonetwork-opensource.org/)
