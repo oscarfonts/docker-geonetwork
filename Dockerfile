@@ -1,13 +1,19 @@
-FROM tomcat:7.0
-MAINTAINER Eliot Jordan <eliot.jordan@gmail.com>
+FROM tomcat:8-jre8
+MAINTAINER Oscar Fonts <oscar.fonts@ggeomati.co>
 
-RUN apt-get update
+ENV VERSION 3.0.4
+ENV GEONETWORK_DATA_DIR /var/local/geonetwork
 
 WORKDIR /usr/local/tomcat/webapps
-RUN wget -O geonetwork.war http://sourceforge.net/projects/geonetwork/files/GeoNetwork_opensource/v3.0.0/geonetwork.war/download
 
-WORKDIR /usr/local/tomcat
+RUN set -x \
+	&& apt-get update \
+	&& apt-get upgrade \
+	&& rm -rf /var/lib/apt/lists/* \
+    && wget http://sourceforge.net/projects/geonetwork/files/GeoNetwork_opensource/v${VERSION}/geonetwork.war \
+    && mkdir ${GEONETWORK_DATA_DIR}
 
-ENV JAVA_OPTS="-Djava.security.egd=file:/dev/./urandom -Djava.awt.headless=true -Xms48m -Xss2M -XX:MaxPermSize=512m -XX:+UseConcMarkSweepGC"
-
-CMD ["catalina.sh", "run"]
+# Tomcat environment
+ENV CATALINA_OPTS "-server -Djava.awt.headless=true \
+	-Xms512m -Xmx1560m -XX:+UseConcMarkSweepGC \
+	-Dgeonetwork.dir=${GEONETWORK_DATA_DIR}"
