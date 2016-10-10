@@ -7,9 +7,6 @@ ENV GEONETWORK_DATA_DIR /var/local/geonetwork
 WORKDIR /usr/local/tomcat/webapps
 
 RUN set -x \
-    && apt-get update \
-    && apt-get -y upgrade \
-    && rm -rf /var/lib/apt/lists/* \
     && wget http://sourceforge.net/projects/geonetwork/files/GeoNetwork_opensource/v${VERSION}/geonetwork.war \
     && unzip geonetwork.war -d geonetwork \
     && mkdir ${GEONETWORK_DATA_DIR} \
