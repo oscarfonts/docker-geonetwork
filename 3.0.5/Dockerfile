@@ -1,7 +1,7 @@
 FROM tomcat:8-jre8
 MAINTAINER Oscar Fonts <oscar.fonts@geomati.co>
 
-ENV VERSION 3.0.4
+ENV VERSION 3.0.5
 ENV GEONETWORK_DATA_DIR /var/local/geonetwork
 
 WORKDIR /usr/local/tomcat/webapps
@@ -17,6 +17,6 @@ RUN set -x \
 
 # Tomcat environment
 ENV CATALINA_OPTS "-server -Djava.awt.headless=true \
-	-Xms512m -Xmx1560m -XX:+UseConcMarkSweepGC \
+	-Xms256m -Xmx512m -XX:+UseConcMarkSweepGC \
 	-Dgeonetwork.dir=${GEONETWORK_DATA_DIR}"
 
