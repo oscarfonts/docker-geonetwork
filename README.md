@@ -4,7 +4,7 @@
 
 Docker container running [GeoNetwork](http://geonetwork-opensource.org/)
 
-* [`3.2.1`, `latest` (*3.2.1/Dockerfile*)](https://github.com/oscarfonts/docker-geonetwork/tree/master/3.2.0/Dockerfile)
+* [`3.2.1`, `latest` (*3.2.1/Dockerfile*)](https://github.com/oscarfonts/docker-geonetwork/tree/master/3.2.1/Dockerfile)
 * [`3.0.5` (*3.0.5/Dockerfile*)](https://github.com/oscarfonts/docker-geonetwork/tree/master/3.0.5/Dockerfile)
 
 Forked from [eliotjordan/geonetwork-docker](https://hub.docker.com/r/eliotjordan/geonetwork-docker/)
