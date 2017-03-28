@@ -1,15 +1,13 @@
-docker-geonetwork
-=================
+# docker-geonetwork
+
+**Im keeping this image for historical reasons, but I strongly encourage you to use the new [official GeoNetwork image](https://hub.docker.com/_/geonetwork/) instead**.
 
 Docker container running [GeoNetwork](http://geonetwork-opensource.org/)
 
 * [`3.2.1`, `latest` (*3.2.1/Dockerfile*)](https://github.com/oscarfonts/docker-geonetwork/tree/master/3.2.0/Dockerfile)
 * [`3.0.5` (*3.0.5/Dockerfile*)](https://github.com/oscarfonts/docker-geonetwork/tree/master/3.0.5/Dockerfile)
 
-**For more complete and better maintained images, consider using [geocat/geonetwork](https://hub.docker.com/r/geocat/geonetwork/)**.
-
 Forked from [eliotjordan/geonetwork-docker](https://hub.docker.com/r/eliotjordan/geonetwork-docker/)
-
 
 ### Use  pre-built image
 
