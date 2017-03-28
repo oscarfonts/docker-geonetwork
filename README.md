@@ -1,6 +1,6 @@
 # docker-geonetwork
 
-**Im keeping this image for historical reasons, but I strongly encourage you to use the new [official GeoNetwork image](https://hub.docker.com/_/geonetwork/) instead**.
+**Keeping this image for historical reasons, but I strongly encourage you to use the new [official GeoNetwork image](https://hub.docker.com/_/geonetwork/) instead**.
 
 Docker container running [GeoNetwork](http://geonetwork-opensource.org/)
 
